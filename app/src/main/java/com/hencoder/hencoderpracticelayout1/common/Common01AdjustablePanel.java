@@ -3,6 +3,8 @@ package com.hencoder.hencoderpracticelayout1.common;
 import android.content.Context;
 import android.support.v7.widget.AppCompatSeekBar;
 import android.util.AttributeSet;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
@@ -65,5 +67,20 @@ public class Common01AdjustablePanel extends RelativeLayout {
         };
         widthBar.setOnSeekBarChangeListener(listener);
         heightBar.setOnSeekBarChangeListener(listener);
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        for (int i = 0; i < getChildCount(); i++) {
+            View child = getChildAt(i);
+            // 在子View中以 layout_XXX的集合
+            // layoutParams.width： 对于于layout_width
+            // layoutParams.height： 对于于layout_height
+            ViewGroup.LayoutParams layoutParams = child.getLayoutParams();
+            int width = layoutParams.width;
+        }
+
+
     }
 }

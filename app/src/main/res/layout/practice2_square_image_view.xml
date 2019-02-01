@@ -10,9 +10,9 @@
         android:layout_height="100dp"
         android:background="#2B2B2B">
 
-        <com.hencoder.hencoderpracticelayout1.practice.Practice01SquareImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+        <com.hencoder.hencoderpracticelayout1.practice.Practice02SquareImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:scaleType="centerCrop"
             android:src="@drawable/avatar_rengwuxian" />
 
